@@ -18,52 +18,58 @@
     </script>
 </head>
 <body>
-    <div>
-        <h2>חוקי שומרים</h2>
         <table>
             <tr>
-                <td>א</td>
-                <td id="lawText1">המוצא אבידה ונוטלה (להלן – המוצא) חייב להשיבה לבעלה או להודיע עליה בהקדם למשטרה, זולת אם בנסיבות הענין יש להניח שבעל האבידה התייאש ממנה מחמת מיעוט שוויה.</td>
-            </tr>
-            <tr>
-                <td>ב</td>
-                <td id="lawText2">הודיע המוצא למשטרה, רשאי הוא למסור לה את האבידה והוא חייב לעשות כן אם היא דרשה זאת ממנו.</td>
+                <td>
+                    <div>
+                        <h2>חוקי שומרים (מדינת ישראל)</h2>
+                        <table>
+                            <tr>
+                                <td>א</td>
+                                <td id="lawText1">המוצא אבידה ונוטלה (להלן – המוצא) חייב להשיבה לבעלה או להודיע עליה בהקדם למשטרה, זולת אם בנסיבות הענין יש להניח שבעל האבידה התייאש ממנה מחמת מיעוט שוויה.</td>
+                            </tr>
+                            <tr>
+                                <td>ב</td>
+                                <td id="lawText2">הודיע המוצא למשטרה, רשאי הוא למסור לה את האבידה והוא חייב לעשות כן אם היא דרשה זאת ממנו.</td>
+                            </tr>
+                        </table>
+                        <select style="height:25px;" id="lawSelect" onchange="moveTextToTextBox(this, 'LawTextbox', 'lawText')">
+                            <option selected>Select item</option>
+                            <option value="1" >א</option>
+                            <option value="2">ב</option>
+                            <option value="3" >ג</option>
+                            <option value="4">ד</option>
+                        </select>
+                        <input type="text" id="LawTextbox" class="inactive" />
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <h2>הלכות שומרים שו״ע</h2>
+                        <table>
+                            <tr>
+                                <td>א</td>
+                                <td id="HalachaText1">הרואה אבידת ישראל חייב לטפל בה להשיבה לבעליה שנאמר השב תשיבם ואם נטלם ע"מ לגזלה ועדיין לא נתייאשו הבעלים ממנה עובר משום השב תשיבם לאחיך ומשום לא תגזול ומשום לא תוכל להתעלם ואפי' אם יחזירנה אח"כ כבר עבר על לא תוכל להתעלם נטלה לפני יאוש על דעת להחזירה ולאחר ייאוש נתכוון לגזלה אינו עובר אלא משום השב תשיבם המתין עד אחר יאוש ונטלה אינו עובר אלא משום לא תוכל להתעלם</td>
+                            </tr>
+                            <tr>
+                                <td>ב</td>
+                                <td id="HalachaText2">בד"א במקום שהוא חייב להשיב משם ובמקום שראוי להסתפק בה באבידה ושתהא בענין שמוכח שהיא אבידה ושלא תהי' מדעת ושיהי' בה שוה פרוטה ושיש סי' בגופה או במקומ' ושהיה מטפל בה אם היתה שלו ושתהי' של מי שחייב להשיב אבידתו אבל אם חסר א' מכל אלו אינו חייב להשיב אבידתו</td>
+                            </tr>
+                        </table>
+                        <select style="height:25px;" id="halachaSelect" onchange="moveTextToTextBox(this, 'HalachaTextbox', 'HalachaText')">
+                            <option selected>Select item</option>
+                            <option value="1" >א</option>
+                            <option value="2">ב</option>
+                            <option value="3" >ג</option>
+                            <option value="4">ד</option>
+                        </select>
+                        <input type="text" id="HalachaTextbox" class="inactive" />
+                    </div>
+                </td>
             </tr>
         </table>
-        <select style="height:25px;" id="lawSelect" onchange="moveTextToTextBox(this, 'LawTextbox', 'lawText')">
-            <option selected>Select item</option>
-            <option value="1" >א</option>
-            <option value="2">ב</option>
-            <option value="3" >ג</option>
-            <option value="4">ד</option>
-        </select>
-        <input type="text" id="LawTextbox" class="inactive" />
-    </div>
-
-    <div>
-        <h2>חוקי שומרים</h2>
-        <table>
-            <tr>
-                <td>א</td>
-                <td id="HalachaText1">הרואה אבידת ישראל חייב לטפל בה להשיבה לבעליה שנאמר השב תשיבם ואם נטלם ע"מ לגזלה ועדיין לא נתייאשו הבעלים ממנה עובר משום השב תשיבם לאחיך ומשום לא תגזול ומשום לא תוכל להתעלם ואפי' אם יחזירנה אח"כ כבר עבר על לא תוכל להתעלם נטלה לפני יאוש על דעת להחזירה ולאחר ייאוש נתכוון לגזלה אינו עובר אלא משום השב תשיבם המתין עד אחר יאוש ונטלה אינו עובר אלא משום לא תוכל להתעלם</td>
-            </tr>
-            <tr>
-                <td>ב</td>
-                <td id="HalachaText2">בד"א במקום שהוא חייב להשיב משם ובמקום שראוי להסתפק בה באבידה ושתהא בענין שמוכח שהיא אבידה ושלא תהי' מדעת ושיהי' בה שוה פרוטה ושיש סי' בגופה או במקומ' ושהיה מטפל בה אם היתה שלו ושתהי' של מי שחייב להשיב אבידתו אבל אם חסר א' מכל אלו אינו חייב להשיב אבידתו</td>
-            </tr>
-        </table>
-        <select style="height:25px;" id="halachaSelect" onchange="moveTextToTextBox(this, 'HalachaTextbox', 'HalachaText')">
-            <option selected>Select item</option>
-            <option value="1" >א</option>
-            <option value="2">ב</option>
-            <option value="3" >ג</option>
-            <option value="4">ד</option>
-        </select>
-        <input type="text" id="HalachaTextbox" class="inactive" />
-    </div>
-
-    <input type="button" id="chooseCoparedText" name="Compare"/>
-    <input type="text" id="ComparedTextbox" class="inactive" />
+    <input type="button" id="chooseComparedText" name="Compare" value="בחר לקשר בין החוק להלכה"/>
+    <input type="text" id="ComparedTextbox" class="inactive" value="כתוב סיבה להתאמה"/>
 
 </body>
 </html>
